@@ -16,9 +16,55 @@
         border: 0px;
         margin: 0px;
       }
-      a:hover{
-        color: green;
-      }
+      .loader{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   align-items: center;
+
+ }
+ /* Creating the dots */
+ span{
+   height: 25px;
+   width: 25px;
+   margin-right: 10px;
+   border-radius: 50%;
+   background-color: #32502E;
+   animation: loading 1s linear infinite;
+ }
+ /* Creating the loading animation*/
+ @keyframes loading {
+   0%{
+    transform: translateX(0);
+   }
+   25%{
+    transform: translateX(15px);
+   }
+   50%{
+    transform: translateX(-15px);
+   }
+   100%{
+    transform: translateX(0);
+   }
+
+ }
+span:nth-child(1){
+  animation-delay: 0.1s;
+}
+span:nth-child(2){
+  animation-delay: 0.2s;
+}
+span:nth-child(3){
+  animation-delay: 0.3s;
+}
+span:nth-child(4){
+  animation-delay: 0.4s;
+}
+span:nth-child(5){
+  animation-delay: 0.5s;
+}
 
     </style>
   </head>
@@ -29,7 +75,15 @@
       <p>The way you can save yourself is by clicking on the link below:-</p>
       <a style="text-decoration: none; color: red;" href="https://nothingyouarehackedagain.com">Click me if you dare😈</a>
     </div>
-
+    
+      <div class="loader">
+      <span></span>
+      <span ></span>
+      <span ></span>
+      <span ></span>
+      <span></span>
+      <span></span>
+    </div>
 
     <script language="JavaScript">
     document.onkeypress = function (event) {
